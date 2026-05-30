@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's In My Fridge?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= SPLASH SCREEN ================= -->
+
+<section id="splashScreen" class="splash-screen">
+
+    <div class="splash-content">
+
+        <div class="logo-circle">
+            🍳
+        </div>
+
+        <h1>What's In My Fridge?</h1>
+
+        <p>
+            Turn ingredients into delicious meals
+        </p>
+
+        <button id="startBtn" class="primary-btn">
+            Get Started →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= MAIN APP ================= -->
+
+<section id="mainApp" class="main-app hidden">
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>🍳 What's In My Fridge?</h1>
+
+            <p>
+                Find meals from ingredients you already have
+            </p>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button id="favoriteBtn" class="icon-btn">
+                ❤️
+            </button>
+
+            <button id="themeBtn" class="icon-btn">
+                🌙
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero glass">
+
+        <div class="hero-text">
+
+            <h2>
+                Discover Recipes Instantly
+            </h2>
+
+            <p>
+                Select ingredients from your kitchen and get
+                Pakistani & International recipe ideas.
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+            🍽️
+        </div>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search-section">
+
+        <h2>
+            Search Ingredients
+        </h2>
+
+        <input
+            type="text"
+            id="ingredientSearch"
+            placeholder="Search ingredients..."
+        >
+
+    </section>
+
+    <!-- Selected Ingredients -->
+
+    <section class="glass selected-section">
+
+        <h3>Selected Ingredients</h3>
+
+        <div id="selectedTags" class="selected-tags">
+
+            <span class="empty-tag">
+                No ingredients selected
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+
+    <section class="ingredient-section">
+
+        <h2>🥚 Dairy & Eggs</h2>
+
+        <div class="ingredients">
+
+            <div class="ingredient">🥚 Eggs</div>
+            <div class="ingredient">🥛 Milk</div>
+            <div class="ingredient">🧀 Cheese</div>
+            <div class="ingredient">🧈 Butter</div>
+            <div class="ingredient">🥣 Yogurt</div>
+
+        </div>
+
+        <h2>🥩 Meat</h2>
+
+        <div class="ingredients">
+
+            <div class="ingredient">🍗 Chicken</div>
+            <div class="ingredient">🥩 Beef</div>
+            <div class="ingredient">🍖 Mutton</div>
+            <div class="ingredient">🐟 Fish</div>
+
+        </div>
+
+        <h2>🌾 Grains</h2>
+
+        <div class="ingredients">
+
+            <div class="ingredient">🍚 Rice</div>
+            <div class="ingredient">🍞 Bread</div>
+            <div class="ingredient">🍝 Pasta</div>
+            <div class="ingredient">🌾 Flour</div>
+
+        </div>
+
+        <h2>🥦 Vegetables</h2>
+
+        <div class="ingredients">
+
+            <div class="ingredient">🧅 Onion</div>
+            <div class="ingredient">🍅 Tomato</div>
+            <div class="ingredient">🥔 Potato</div>
+            <div class="ingredient">🫑 Capsicum</div>
+            <div class="ingredient">🍄 Mushroom</div>
+            <div class="ingredient">🥕 Carrot</div>
+            <div class="ingredient">🫛 Peas</div>
+            <div class="ingredient">🥬 Spinach</div>
+
+        </div>
+
+        <h2>🌶️ Desi Essentials</h2>
+
+        <div class="ingredients">
+
+            <div class="ingredient">🧄 Garlic</div>
+            <div class="ingredient">🫚 Ginger</div>
+            <div class="ingredient">🌶️ Green Chili</div>
+            <div class="ingredient">🌿 Coriander</div>
+            <div class="ingredient">✨ Garam Masala</div>
+            <div class="ingredient">🟡 Turmeric</div>
+
+        </div>
+
+    </section>
+
+    <!-- Suggestions -->
+
+    <section class="glass suggestion-box">
+
+        <h2>🔥 Suggested Recipes</h2>
+
+        <div id="suggestionList">
+
+            <p>
+                Select ingredients to see suggestions.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Find Button -->
+
+    <button id="findBtn" class="find-btn">
+        🍽️ Find Recipes
+    </button>
+
+    <!-- Recipe Results -->
+
+    <section>
+
+        <h2 class="section-title">
+            Recommended Recipes
+        </h2>
+
+        <div id="recipeGrid" class="recipe-grid">
+
+        </div>
+
+    </section>
+
+    <!-- Stats -->
+
+    <section class="stats">
+
+        <div class="glass stat">
+
+            <h2 id="ingredientCount">
+                0
+            </h2>
+
+            <p>
+                Ingredients
+            </p>
+
+        </div>
+
+        <div class="glass stat">
+
+            <h2 id="recipeCount">
+                0
+            </h2>
+
+            <p>
+                Recipes Found
+            </p>
+
+        </div>
+
+        <div class="glass stat">
+
+            <h2 id="favCount">
+                0
+            </h2>
+
+            <p>
+                Favorites
+            </p>
+
+        </div>
+
+    </section>
+
+</section>
+
+<!-- ================= FAVORITES MODAL ================= -->
+
+<div id="favoritesModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeFavorites" class="close-btn">
+            &times;
+        </span>
+
+        <h2>
+            ❤️ Favorite Recipes
+        </h2>
+
+        <div id="favoriteRecipes">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= RECIPE DETAILS MODAL ================= -->
+
+<div id="recipeModal" class="modal">
+
+    <div class="modal-content large-modal">
+
+        <span id="closeRecipe" class="close-btn">
+            &times;
+        </span>
+
+        <div id="recipeDetail">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src ="script.js"></script>
+</body>
+</html>
